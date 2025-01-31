@@ -3,7 +3,7 @@ version 42
 __lua__
 function _draw()
 	cls()
-	print("pico-8")
+	print("pico-8", 0, 0, 4)
 end
 
 __gfx__
