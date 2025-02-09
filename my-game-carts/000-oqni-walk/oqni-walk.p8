@@ -4,12 +4,20 @@ __lua__
 -- sprite properties
 x = 63
 y = 63
-speed = 2
+sprite_size = 3
+speed = 1
 
 function _update()
 	-- move left and right
 	if btn(⬅️) then x -= speed end
 	if btn(➡️) then x += speed end
+	
+	-- ensure it stays in bounds
+	if x - sprite_size < 128 then
+		x = mid(0, x, 128 - sprite_size)
+	elseif x
+	end
+
 end
 
 function _draw()

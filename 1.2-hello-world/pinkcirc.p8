@@ -1,9 +1,19 @@
 pico-8 cartridge // http://www.pico-8.com
 version 42
 __lua__
+-- sprite properties
+x = 64
+y = 64
+
+-- event listening
+function _update()
+	if (btn(0)) then x -= 1 end
+	if (btn(1)) then x += 1 end
+end
+
 function _draw()
-	cls()
-	print("pico-8", 128/2, 128/2, 1)
+ cls()
+	circfill(x, y, 7, 14)
 end
 
 __gfx__
